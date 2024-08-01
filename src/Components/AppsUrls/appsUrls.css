@@ -1,0 +1,21 @@
+.apps-urls {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+
+.app-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.app-name {
+  font-weight: bold;
+}
+
+.app-time {
+  color: #777;
+}

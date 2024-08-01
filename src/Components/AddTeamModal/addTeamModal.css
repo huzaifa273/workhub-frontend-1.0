@@ -1,0 +1,199 @@
+:root {
+  --dark-grey-01: #2f2f2f;
+  --dark-grey-02: #474747;
+  --light-grey: #929292;
+  --primary: #2aa7ff;
+  --background-color: #f4f4f4;
+  --error-color: #ff4c4c;
+  --text-color: #474747;
+  --input-border-color: #ccc;
+  --input-focus-border-color: #007bff;
+  --button-background-color: #2aa7ff;
+  --button-hover-background-color: #005bb5;
+  --input-padding: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 50px 150px;
+  border-radius: 10px;
+  width: 819px;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.cancel-button,
+.send-button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 102px;
+  height: 45px;
+}
+.cancel-button {
+  background: #fff;
+  border: 1px solid var(--light-grey);
+}
+
+.send-button {
+  background: var(--button-background-color);
+  color: white;
+  margin-left: 10px;
+}
+
+.send-button:hover {
+  background: var(--button-hover-background-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: var(--input-padding);
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  background: white;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box; /* Ensures the width includes padding and border */
+}
+
+.form-group input:focus {
+  border-color: var(--input-focus-border-color);
+  outline: none;
+}
+
+.project-select {
+  position: relative;
+}
+
+.selected-projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.selected-projects .input-wrapper {
+  flex-grow: 1;
+  position: relative;
+}
+
+.selected-projects input {
+  border: none;
+  padding: 10px;
+  margin: 0; /* Remove any default margins */
+  width: calc(100% - 25px); /* Adjust the width to make room for the icon */
+  padding-right: 25px; /* Add padding to the right to prevent text overlap */
+  outline: none;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.selected-projects .dropdown-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent icon from interfering with input interaction */
+  width: 15px; /* Adjust width as needed */
+  height: 15px; /* Adjust height as needed */
+}
+
+.selected-project {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+.selected-project img {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.close-cross {
+  width: 12px;
+}
+
+.project-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.project-option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.project-option:hover {
+  background: #007bff;
+  color: white;
+}
+
+.red-star {
+  color: var(--error-color);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.enter-team-name-input {
+  border-radius: 10px;
+}

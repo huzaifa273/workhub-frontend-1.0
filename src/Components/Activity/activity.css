@@ -1,0 +1,30 @@
+.activity {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+
+.activity img {
+  width: 100%;
+  height: auto;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.activity-info {
+  margin-left: 10px;
+}
+
+.activity-user {
+  font-weight: bold;
+}
+
+.activity-time {
+  color: #777;
+}
